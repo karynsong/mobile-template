@@ -1,0 +1,196 @@
+.yo-list-map-hospital{
+    @include border($border-width:0 0 1px 0,$border-color:map-get($base,border-color));
+    .item{
+        .mark{
+            @include border($border-width:1px,$border-color:map-get($base,border-color),$radius: 50%);
+        }
+        .flex{
+            margin: 0 .15rem;
+        }
+        .title{
+            color: map-get($base,base-color);
+            font-size: map-get($benmu-font,font-18);
+        }
+        .detail{
+            color: map-get($base,base-color);
+            margin-top: .1rem;
+            font-size: map-get($benmu-font,font-14);
+            min-height: 27px;
+        }
+    }
+}
+.yo-list-map-address{
+    .item{
+       .flex{
+            @include ellipsis();
+            @include border($border-width:0 1px 0 0,$border-color:map-get($base,border-color));
+            padding: .05rem .1rem .05rem 0;
+            margin: 0 .2rem 0 0;
+        }
+    }
+}
+.map-detail{
+    margin-top: .05rem;
+    .title{
+        font-size: map-get($benmu-font,font-15);
+        color: map-get($base,base-color);
+    }
+    .item{
+        .flex{
+            @include border($border-width:0,$border-color:map-get($base,border-color));
+        }
+    }
+    .detail{
+        font-size: map-get($benmu-font,font-13);
+        margin-top: .1rem;
+        color: map-get($base,base-color);
+        white-space: normal;
+        line-height: .2rem;
+    }
+}
+.anxious-tag{
+    font-size: map-get($benmu-font,font-12);
+    color: map-get($base,base-white);
+    background-color: map-get($base,base-orange);
+    padding: .02rem;
+    border-radius: .05rem;
+    margin-left: .1rem;
+}
+
+
+/*知名专家团队表格*/
+.yo-list-scroll {
+    @include flexbox();
+    @include flex-direction(row);
+
+    > .item {
+        position:relative;
+        @include flex-direction(column);
+        -moz-flex-shrink: 0;
+        -webkit-flex-shrink: 0;
+        flex-shrink: 0;
+        @include border($border-width:0 0 0 1px, $width-percent: 200%);
+
+        .col {
+            padding: 0;
+            @include rect(.65rem,.45rem);
+            @include flex-direction(column);
+            @include align();
+            &:not(:last-child) {
+                @include border($border-width: 0 0 1px);
+            }
+            p {
+                color: map-get($base,base-white);
+                font-size: map-get($benmu-font,font-15);
+                line-height: .16rem;
+                &:nth-child(2) {
+                    font-size: map-get($benmu-font,font-13);
+                }
+            }
+        }
+        .col-date p{
+            font-size: map-get($benmu-font,font-13);
+            color: map-get($base,base-color);
+            line-height: .16rem;
+        }
+        .booked-full {
+            background: map-get($base,booked-full-color);
+        }
+        .bookable {
+            background: map-get($base,base-green);
+
+        }
+
+    }
+}
+/*竖线问题*/
+.level-two-tit {
+    @include flexbox();
+    @include align-items();
+    margin: .02rem 0 .05rem;
+    /*line-height: .2rem;*/
+    color: map-get($base, base-color);
+    overflow: visible;
+    @include flex-wrap($flex-wrap: wrap);
+    span.tag-text02{
+        margin-left: .05rem;
+        padding: 0 0 0 .05rem;
+        position: relative;
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: .03rem;
+            width: 1px;
+            height: .12rem;
+            background: #ddd;
+        }
+    }
+}
+.level-two-tit-white{
+    margin-top: .04rem;
+    span{
+        color: #fff;
+    }
+    span.tag-text02{
+       &::after{
+        background: #fff;
+        }
+    }
+}
+.yo-list-team {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items();
+    margin-left: -.15rem;
+    > .item {
+        position: relative;
+        padding: .25rem 0;
+        @include rect(.84rem,auto);
+        @include flex-direction(column);
+        -moz-flex-shrink: 0;
+        -webkit-flex-shrink: 0;
+        flex-shrink: 0;
+        line-height: 1.2;
+
+        > .mark {
+            @include circle(.47rem);
+            @include border($border-color: map-get($base, base-white));
+            margin-bottom: .13rem;
+
+            &::after {
+                z-index: 1;
+            }
+
+            img {
+                @include circle(.47rem);
+            }
+        }
+        &::after {
+            content: none;
+        }
+        .name {
+            padding: 0 0 .05rem;
+            font-size: map-get($benmu-font, font-15);
+        }
+        .level {
+            font-size: map-get($benmu-font, font-12);
+            color: map-get($base, base-gray);
+        }
+        .level-img {
+            position: absolute;
+            width: .56rem;
+            top: .6rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 2;
+        }
+    }
+}
+.flex-column{
+   .doctor-index-level{
+    margin-top: .1rem;
+   }
+}

@@ -1,0 +1,9 @@
+@charset "utf-8";
+@import "../bmcss/widget/yo-mask";
+/**
+ * yo-mask扩展
+ */
+@include yo-mask(
+    $name: dark,
+    $bgcolor: rgba(0,0,0,.7)
+)

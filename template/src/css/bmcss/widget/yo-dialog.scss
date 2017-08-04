@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import "../lib/widget/yo-dialog";
+@import "yo-mask";
+@import "../element/yo-checked";
+
+/**
+ * yo-dialog扩展
+ */
+@include yo-dialog(
+    $name: bm,
+    $border-color: map-get($base,border-color),
+    $title-font-size:map-get($benmu-font,font-18),
+    $bd-font-size:map-get($benmu-font,font-15)
+)
+@include yo-dialog(
+    $name: bd-center,
+    $border-color: map-get($base,border-color),
+    $title-font-size:map-get($benmu-font,font-18),
+    $bd-font-size:map-get($benmu-font,font-15)
+)
+@include yo-dialog(
+    $name: bm-large,
+    $border-color: map-get($base,border-color),
+    $title-font-size:map-get($benmu-font,font-18),
+    $bd-font-size:map-get($benmu-font,font-15)
+)

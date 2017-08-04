@@ -1,0 +1,59 @@
+@charset "utf-8";
+@import "../lib/fragment/yo-card";
+
+/**
+ * yo-card扩展
+ */
+@include yo-card(
+    $name: map-pic
+){
+    .hd{
+        padding: 0 .2rem;
+        min-height: .5rem;
+        color: map-get($base,base-color);
+    }
+    .extra{
+        padding: 0 .2rem .2rem;
+    }
+}
+@include yo-card(
+    $name: panel
+) {
+    &:not(:nth-child(2)) {
+        margin-top: .1rem;
+    }
+    padding: .2rem 0 0;
+    position: relative;
+
+    .tit-logo {
+        display: inline-block;
+        width: .2rem;
+        margin-right: .05rem;
+    }
+    .hd {
+        @include align($justify-content:flex-start);
+        padding-left: .15rem;
+        font-size: map-get($benmu-font,font-15);
+        line-height: .2rem;
+        color: map-get($base, base-color);
+        min-height: auto;
+    }
+    .bd {
+        padding: .11rem .25rem .1rem .4rem;
+        position: relative;
+        font-size: map-get($benmu-font,font-15);
+        line-height: .27rem;
+
+        .good-in {
+            margin: 0 .25rem .15rem 0;
+            line-height: .27rem;
+        }
+        .set-height{
+            height: 0.8rem
+        }
+        .set-height-auto{
+            height: auto !important;
+        }
+
+    }
+}

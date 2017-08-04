@@ -1,0 +1,98 @@
+@charset "utf-8";
+@import "../lib/fragment/yo-search";
+
+/**
+ * yo-search扩展
+ */
+
+@include yo-search(
+    $name: map
+){
+  z-index: 1;
+  @include border($border-width:0 0 1px 0,$border-color:map-get($base,border-color));
+  > .operation {
+    @include align;
+    position: relative;
+
+    > .ff-search {
+      @include rect(.35rem,100%);
+      @include align();
+      position: absolute;
+      z-index: 2;
+      left: 0;
+    }
+    > .input {
+      padding-left: .35rem;
+      font-size: map-get($benmu-font,font-14);
+      color: map-get($base,base-color);
+      &-shrink {
+        @include transition(margin .2s ease-out);
+        &:focus {
+          margin-right: .4rem;
+        }
+      }
+    }
+  }
+  > .cancel {
+    right: .1rem;
+    width: auto;
+    font-weight: bold;
+    font-size: map-get($benmu-font,font-15);
+  }
+  > .ff-del {
+    @include rect(.35rem,100%);
+    @include align();
+    position: absolute;
+    right: .5rem;
+    z-index: 2;
+    bottom:0;
+    top:0;
+  }
+}
+
+@include yo-search(
+        $name: surgery
+){
+  position: relative;
+  > .operation {
+    @include rect(2.32rem,100%);
+    flex: none;
+  }
+  > .ff-del {
+    left: 2.07rem;
+  }
+
+  >.order-query {
+    line-height: .14rem;
+    @include flex();
+    @include align($justify-content:flex-end);
+    color: map-get($base,base-blue);
+    font-size: map-get($benmu-font,font-15);
+    font-weight: bold;
+
+    .txt {
+      margin-right: .1rem;
+    }
+  }
+}
+.yo-search-map::after {
+  z-index: 1;
+}
+@include yo-search(
+        $name: specialist,
+        $radius: .35rem,
+        $padding: .1rem,
+        $input-height: .35rem
+){
+  @include border($border-width:0);
+  > .operation {
+    > .input {
+      font-size: map-get($benmu-font,font-13);
+      padding: .11rem 0 .11rem .35rem;
+    }
+  }
+  > .ff-del {
+    left: auto;
+    right: .15rem;
+  }
+}

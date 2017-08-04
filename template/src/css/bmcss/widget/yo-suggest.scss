@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import "../lib/widget/yo-suggest";
+
+/**
+ * yo-suggest扩展
+ */
+
+@include yo-suggest (
+    $name: search,
+    $op-padding: .1rem,
+    $bgcolor: map-get($base,content-color),
+    $cancel-width: .5rem,
+    $cancel-color: map-get($base,on-font-color),
+    $placeholder-color: #ccc
+){
+    .action{
+        margin-right: .4rem;
+        position: relative;
+        .ff-del{
+            position: absolute;
+            top: 0;
+            right: .1rem;
+        }
+    }
+    .operate{
+        &:after{
+            border-color: #ddd;
+        }
+        .input{
+            padding: 0 .1rem;
+            color: map-get($base,links-color);
+        }
+        .cancel{
+            font-weight: bold;
+            font-size: map-get($benmu-font,fontSize-big);
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@charset "utf-8";
+@import "../lib/layout/yo-flex";
+
+/**
+ * yo-flex扩展
+ */
+
+@include yo-flex {
+    // 优化Demo在浏览器中查看的滚动体验
+    // Yo框架内部已移除此规则，防止某些版本的iOS webview崩溃
+    > .flex,
+    .flex-inherit > .flex {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.benmu-flex {
+    // position: relative;
+    // height: 100%;
+    position: absolute;
+    // top: .4rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    // @include flexbox();
+    // @include flex-direction($flex-direction: column);
+    background-color: map-get($base, bg-color);
+}
+/*页面不添加iscroll 滚动时追加此类，比如input表单页iscroll 光标一直存在问题*/
+.benmu-flex-scroll {
+    .accountCont {
+        @include flex(1, map-get($flex, direction));
+        overflow: auto;
+    }
+    .heightAll {
+        @extend .accountCont;
+    }
+}

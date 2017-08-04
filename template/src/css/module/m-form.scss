@@ -1,0 +1,549 @@
+/*textarea*/
+.feedback-header{
+    height: .55rem;
+    background-color: #fff;
+    margin-bottom: .1rem;
+    @include flexbox;
+    @include align;
+    font-size: map-get($benmu-font,font-15);
+    font-weight: bold;
+    .flex{
+        @include flex;
+    }
+    .feedback-left{
+        @include border($border-width: 0 1px 0 0);
+        height: 100%;
+        @include flexbox;
+        @include align;
+    }
+    .feedback-right{
+        @extend .feedback-left;
+        @include border($border-width: 0);
+    }
+}
+.yo-textarea{
+    width: 100%;
+    height: 1.5rem;
+    resize: none;
+    padding: .15rem;
+    font-size: map-get($benmu-font,font-15);
+}
+.yo-list{
+    .bm-input{
+        font-size: map-get($benmu-font,font-15);
+    }
+}
+
+.feedback-btn{
+    margin-top: .28rem;
+    text-align: center;
+    .yo-btn{
+        font-size: map-get($benmu-font,font-18);
+        font-weight: bold;
+    }
+}
+/*登录注册*/
+.yo-list-input{
+    .item{
+        font-size: map-get($benmu-font,font-15);
+        /*height: .55rem;*/
+        padding: .14rem;
+        .mark{
+            width: .81rem;
+            font-weight: bold;
+            margin-right: .1rem;
+        }
+        .login-input{
+            @include flex;
+            input{
+               width: 100%;
+               border: none;
+               background-color: #fff;
+               color: map-get($base,base-color) !important;
+            }
+        }
+        .input-del-box{
+            @include square(.5rem);
+            margin: -0.3rem -.15rem -0.3rem 0;
+            text-align: center;
+            line-height: .5rem;
+        }
+        .input-tip-box{
+            margin-right: -.05rem;
+        }
+        .input-del-yzm{
+            margin-right: 0;
+        }
+        .get-yzm{
+            color: map-get($base,base-blue);
+            /*@include border($border-width:0 0 0 1px);*/
+            padding-left: .15rem;
+            position: relative;
+            width: .98rem;
+            text-align: center;
+            &::after{
+                position: absolute;
+                left: 0;
+                border-left: 1px solid #ddd;
+                content:"";
+                height: .4rem;
+                margin-top: .02rem;
+                -webkit-transform: scale(0.5) translatey(-50%);
+                transform: scale(0.5) translatey(-50%);
+                width: 1px;
+            }
+        }
+        .yzm-countdown{
+            color: map-get($base,placeholder-color);
+            font-weight: normal;
+        }
+    }
+}
+.input-error-tip{
+    color: red;
+    margin: .05rem 0 -0.1rem .15rem;
+    font-size: 0.12rem;
+}
+.bm-voice{
+    color: map-get($base,base-gray);
+    padding: .1rem .15rem 0 .15rem;
+    font-size: 0.12rem;
+    text-align: right;
+    height: .3rem;
+    .voice-txt{
+       color: map-get($base,base-blue);
+    }
+}
+.bm-voice-gray{
+    .voice-txt{
+        color: map-get($base,base-gray);
+    }
+}
+.service-agreement{
+    color: map-get($base,base-gray);
+    font-size: map-get($benmu-font,font-12);
+    padding-left: .15rem;
+}
+/*服务协议*/
+.agreement-bg{
+    background-color: #fff;
+    .service-agreement-box{
+        padding: 0 .15rem;
+        font-size: map-get($benmu-font,font-15);
+        .agreement-title{
+            padding: .3rem 0 0 0;
+            text-align: center;
+            font-size: map-get($benmu-font,font-17);
+        }
+        .agreement-title-sub{
+            padding: .2rem 0 .1rem 0;
+        }
+        p{
+            line-height: .25rem;
+            padding-left: .1rem;
+        }
+    }
+}
+/*登录首页*/
+/*解决弹窗文字过细*/
+.popup-container .von-popup .popup-body p.bm-ionic-popup{
+    margin-bottom: 0px;
+    text-align: center;
+    color: #4e5a6c;
+    font-weight: 400 !important;
+}
+.bg-white{
+    background-color: #fff;
+}
+.login-index-bg{
+    background: url(map-get($base,image-path) + 'login/login-index-bg.png');
+    // width: 100%;
+    // height: 1.8rem;
+    background-size: 100%;
+    padding-top: 48%;
+
+}
+.login-index-main{
+    padding: 0 .18rem;
+    margin-top: .2rem;
+    .yo-list-input{
+        margin-bottom: .1rem;
+        .item{
+            padding: .14rem 0;
+            margin: 0 .14rem;
+            @include border($border-width:0 0 1px 0);
+        }
+    }
+    .yo-btn{
+        margin-top: .25rem;
+    }
+    .yo-btn-wechat{
+        margin-top: .15rem;
+    }
+}
+.login-index-type{
+    padding: .01rem .15rem .1rem;
+    .login-index-line{
+        background: url(map-get($base,image-path) + 'login/maybe-line.png');
+        // width: 100%;
+        // height: .25rem;
+        background-size: 100%;
+        padding-top: 7.9%;
+        margin-top: .1rem;
+    }
+}
+.yo-btn-wechat{
+    @include flexbox;
+    @include align;
+    color: map-get($base,base-color);
+    .login-index-wechat-logo{
+        background: url(map-get($base,image-path) + 'login/wechat-logo.png');
+        background-size: cover;
+        width: .25rem;
+        height: .2rem;
+        margin-right: .09rem;
+    }
+}
+/*我的账户*/
+.wechat-title{
+    font-size: map-get($benmu-font,font-13);
+    padding: .17rem 0 .1rem .15rem;
+    color: map-get($base,base-gray);
+}
+.yo-list-message{
+    margin-bottom: .1rem;
+    .item{
+        font-size: map-get($benmu-font,font-15);
+    }
+    .mark{
+        @include flex;
+        font-weight: bold;
+    }
+    .user-picture{
+        @include square(.55rem);
+        img{
+            @include circle(100%);
+        }
+    }
+    .ff-arrow-r{
+        margin-left: .05rem;
+        line-height: .2rem;
+    }
+}
+/*更换手机号*/
+.change-tel-wrap{
+    padding: .15rem .15rem .1rem;
+    .change-tel-img{
+        background: url(map-get($base,image-path) + 'login/change-tel.png');
+        background-size: cover;
+        width: .8rem;
+        height: 1rem;
+        display: block;
+        margin: .35rem auto .3rem;
+    }
+    .change-tel-num{
+        font-size: map-get($benmu-font,font-18);
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: .17rem;
+    }
+    .change-tel-detail{
+        color: map-get($base,base-gray);
+        font-size: map-get($benmu-font,font-13);
+        letter-spacing: .005rem;
+    }
+}
+.account-question-link{
+    font-size: map-get($benmu-font,font-15);
+    color: map-get($base,base-blue);
+    position: fixed;
+    bottom: .15rem;
+    left: 50%;
+    @include transform(translate(-50%,0));
+}
+.pos-static{
+    position: static;
+    @include transform(translate(0,0));
+    padding: .2rem 0;
+    text-align: center;
+}
+/*我的账户-交易记录*/
+.account-record{
+    .item{
+        padding: .16rem .15rem;
+        &::after{
+            left: 0;
+        }
+    .text02{
+        color: map-get($base,base-gray);
+        margin-top: .06rem;
+        }
+    }
+}
+/*卡片*/
+.account-card-wrap{
+    padding: .1rem .1rem 0;
+    color: #fff;
+    .account-card-default{
+        position: relative;
+        margin-bottom: .10rem;
+        height: 1.4rem;
+        border-radius: .04rem;
+        background-color: #f8f8f8;
+        .logo{
+            padding: .15rem 0 0 .1rem;
+            height: .4rem;
+            color: #fff;
+            font-size: map-get($benmu-font,font-15);
+            text-shadow: .01rem .01rem .03rem rgba(0,0,0,.1);
+            &::before{
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: .04rem;
+                margin-top: -0.02rem;
+                content: "";
+            }
+        }
+        .recent-text{
+            position: absolute;
+            right: .15rem;
+            top: .15rem;
+        }
+    }
+    .card-bg{
+        position: absolute;
+        top: .18rem;
+        right: .18rem;
+        display: block;
+        width: 1.33rem;
+        height: 1.23rem;
+        img{
+            width: 100%;
+            opacity: .6;
+        }
+    }
+
+    .account-card-ft{
+        @include flexbox;
+        @include align-items($align-items: center);
+        margin-left: .1rem;
+        position: absolute;
+        bottom: .18rem;
+        left: 0;
+        right: .18rem;
+        .card-name{
+           font-size: map-get($benmu-font,font-15);
+           text-shadow: .01rem .01rem .03rem rgba(0,0,0,.1);
+        }
+        .card-number{
+            font-size: map-get($benmu-font,font-20);
+            font-weight: bold;
+            text-align: right;
+            @include flex;
+            text-shadow: .01rem .01rem .03rem rgba(0,0,0,.1);
+        }
+    }
+    .account-card-blue{
+        background-color: #6cb8e0;
+        .logo{
+            &::before{
+                background: url(map-get($base,image-path) + 'account/sbklogo.png') no-repeat;
+                width: .18rem;
+                height: .18rem;
+                background-size: .18rem;
+            }
+        }
+    }
+    .account-card-green{
+        background-color: #68d5bf;
+        .logo{
+            &::before{
+                background: url(map-get($base,image-path) + 'account/jyt-logo.png') no-repeat;
+                width: .18rem;
+                height: .18rem;
+                background-size: .18rem;
+            }
+        }
+    }
+    .account-card-cyan{
+        background-color: #a4c6c8;
+        .logo{
+            &::before{
+                background: url(map-get($base,image-path) + 'account/jyt-logo.png') no-repeat;
+                width: .18rem;
+                height: .18rem;
+                background-size: .18rem;
+            }
+        }
+    }
+}
+.card-list-wrap{
+    padding: .15rem .15rem 0;
+    .account-card-default{
+        height: .9rem;
+    }
+    .account-card-ft{
+        bottom: .08rem;
+        right: .15rem;
+    }
+    .card-bg{
+        width: 1.05rem;
+        height: .9rem;
+        top: .1rem;
+        right: .15rem;
+    }
+}
+/*我的账户-首页*/
+.account-header{
+    background-color: #44bcbc;
+    @include flexbox;
+    @include align-items($align-items: center);
+    margin-bottom: 0;
+    .ff-arrow-r:before{
+        color: #fff;
+    }
+    .item{
+        width: 100%;
+        background: none;
+        padding: .28rem .15rem;
+        color: #fff;
+        .header-user-main{
+            @include flexbox;
+            @include align-items($align-items: center);
+        }
+        .account-nums{
+            font-size: map-get($benmu-font,font-13);
+            margin-top: .05rem;
+            display: block;
+        }
+        .username{
+            font-size: map-get($benmu-font,font-17);
+            font-weight: bold;
+        }
+        .attestation{
+            background-color: #2eaaaa;
+            border-radius: .1rem;
+            padding: 0  .05rem;
+            margin-left: .16rem;
+            @include flexbox;
+        }
+        .attestation-text{
+            font-size: map-get($benmu-font,font-12);
+            color: #cdf8ff;
+            margin-left: .02rem;
+        }
+    }
+}
+.bm-yellow-tip{
+    margin-bottom: .1rem;
+    .item{
+        padding: .1rem;
+        background-color: map-get($base,base-yellow);
+        .flex{
+            margin-right: 0;
+        }
+        .ff-arrow-r:before{
+            font-size: .12rem;
+        }
+
+    }
+}
+.account-index-list{
+    .item{
+        padding: .19rem .15rem;
+        .ff-add:before{
+            color: #ccc;
+        }
+    }
+    .flex{
+        font-size: map-get($benmu-font,font-17);
+        font-weight: bold;
+    }
+    .mr5{
+        font-size: map-get($benmu-font,font-15);
+    }
+}
+.account-index-edit{
+    @include flexbox;
+    @include align;
+    background-color: #fff;
+    font-size: map-get($benmu-font,font-18);
+    color: #ef735a;
+    letter-spacing: .02rem;
+    padding: .12rem 0;
+}
+.account-index-card{
+    background-color: #fff;
+    padding-bottom: .02rem;
+    margin-top: .1rem;
+    .item{
+        padding: .15rem .15rem 0 .15rem;
+    }
+    .card-list-wrap{
+        /*margin-top: .1rem;*/
+    }
+}
+/*loading调整*/
+.loading-bm .pop-loading-box{
+    padding: 4px 19px 6px 19px;
+}
+.loading-container .loading-bm{
+    padding: 42px 28px;
+}
+.loading-container .toast-bm{
+    width: 120px;
+    height: 120px;
+}
+.loading-container .tips{
+    margin-top: 5px;
+}
+.data-null{
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items($align-items: center);
+    padding-top: 1.3rem;
+    .null-icon{
+        background: url(map-get($base,image-path) + 'account/null-icon.png') no-repeat;
+        width: 1.45rem;
+        height: 1.05rem;
+        background-size: contain;
+        display: block;
+    }
+    .data-null-text{
+        font-size: map-get($benmu-font,font-15);
+        color: #999;
+        text-align: center;
+        margin-top: .05rem;
+    }
+}
+/*卡资料*/
+.yo-list-message{
+    .item-btn{
+        padding: .1rem .15rem;
+        .yo-btn-message{
+            margin: 0;
+            padding: .06rem 1em;
+            margin-left: .15rem;
+        }
+    }
+}
+/*实名认证*/
+.bind-card-ft{
+    font-size: map-get($benmu-font,font-12);
+    color: #999;
+    padding: 0 .15rem;
+}
+.custom-checkbox{
+    margin: .12rem 0 0 .15rem;
+    font-size: map-get($benmu-font,font-12);
+    .log-auto{
+        background: url(map-get($base,image-path) + 'account/checked.png') no-repeat;
+        background-size: .13rem;
+        @include square(.13rem);
+        padding-left: .16rem;
+    }
+    .selected{
+        background-position: 0 -28px;
+    }
+}
+

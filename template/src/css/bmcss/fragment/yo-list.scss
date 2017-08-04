@@ -1,0 +1,49 @@
+@charset "utf-8";
+@import "../lib/fragment/yo-list";
+
+/**
+ * yo-list扩展
+ */
+.yo-list{
+    @include border($border-width:0,$border-color:map-get($base,border-color));
+    > .item{
+        color: map-get($base, base-color);
+    }
+    .item:first-child{
+        @include border($border-width:0,$border-color:map-get($base,border-color));
+    }
+    &::after{
+        position: absolute!important;
+    }
+}
+@include yo-list(
+    $name: map-hospital,
+    $item-border-space: 0,
+    $item-padding: .2rem
+){
+    .mark{
+        img{
+            @include circle(.5rem);
+        }
+    }
+}
+@include yo-list(
+    $name: map-address,
+    $item-border-space: .2rem,
+    $item-padding: .15rem .2rem,
+    $item-font-size: .15rem
+)
+@include yo-list(
+    $name: suggest,
+    $item-border-space: 0,
+    $item-padding: .13rem .15rem,
+    $item-font-size: .15rem
+){
+    .flex{
+        @include ellipsis;
+    }
+    .info{
+        font-size: map-get($benmu-font,font-13);
+        color: map-get($base,base-gray);
+    }
+}

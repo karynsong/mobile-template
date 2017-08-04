@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import "../lib/element/yo-checked";
+
+/**
+ * yo-checked扩展
+ */
+
+@include yo-checked(
+    $name: bm
+){
+	width: auto;
+	height: auto;
+}

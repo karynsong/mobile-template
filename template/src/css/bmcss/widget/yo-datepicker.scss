@@ -1,0 +1,18 @@
+@charset "utf-8";
+@import "../lib/widget/yo-datepicker";
+
+/**
+ * yo-datepicker扩展
+ */
+@include yo-datepicker(
+  $name:bm,
+  $week-bar-bgcolor:#7fc8d6,
+  $week-bar-height:.2rem,
+  $week-bar-font-size:.1rem,
+  $month-bar-height:.45rem,
+  $month-bar-color:#666,
+  $month-bar-bgcolor:#fff,
+  $month-bar-font-size:.15rem,
+  $week-height:.5rem
+)
+

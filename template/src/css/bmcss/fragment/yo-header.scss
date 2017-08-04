@@ -1,0 +1,21 @@
+@charset "utf-8";
+@import "../lib/fragment/yo-header";
+
+/**
+ * yo-header扩展
+ */
+
+@include yo-header(
+    $name: wechat
+){
+    overflow: visible;
+    z-index: 1001;
+    &::before{
+    content: "";
+    display: inline-block;
+    @include square($size:.13rem);
+    background: url('https://img.benmu-health.com/m-benmu-health/icon_ha.png') no-repeat;
+    @include background-size(.13rem);
+    margin: 0 0 -0.02rem 0;
+    }
+}

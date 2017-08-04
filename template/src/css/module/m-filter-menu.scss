@@ -1,0 +1,39 @@
+.dropdown-menu {
+  @include border($radius:.05rem);
+  background: map-get($base,base-white);
+  top: .4rem;
+  right: .15rem;
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+  font-size: map-get($benmu-font,font-14);
+  box-shadow: 2px 2px 8px rgba(0,0,0,.2);
+
+  li {
+    padding: .13rem .1rem;
+    line-height: 1;
+
+    &:not(:first-child) {
+      @include border(1px 0 0 0);
+    }
+    &:first-child {
+      @include border(0 0 .005rem .005rem,$border-color:map-get($base,border-color));
+
+      &::after {
+        content: '';
+        top: 0;
+        right: .1rem;
+        left: auto;
+        @include square(.06rem);
+        z-index: 2;
+        @include transform(rotate(135deg));
+        background: map-get($base,base-white);
+        position: absolute;
+      }
+    }
+  }
+
+  &::after {
+    z-index: 1;
+  }
+}

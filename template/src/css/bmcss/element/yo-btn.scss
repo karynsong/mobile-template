@@ -1,0 +1,89 @@
+// @Author: songqi
+// @Date:   2017-07-19
+// @Last modified by:   songqi
+// @Last modified time: 2017-07-19
+
+
+
+@charset "utf-8";
+@import "../lib/element/yo-btn";
+
+/**
+ * yo-btn扩展
+ */
+.yo-btn{
+    margin: .15rem auto;
+    /*&:not(:first-child){
+        margin: .15rem auto 0;
+    }*/
+    font-weight: bold;
+    letter-spacing: .01rem;
+}
+@include yo-btn(
+    $name: bm,
+    $width: 93%
+){
+    font-size: .18rem;
+    display: block;
+    padding: .09rem 0;
+}
+@include yo-btn(
+    $name: bm-v1,
+    $width: 100%
+){
+    font-size: .18rem;
+    display: block;
+    padding: .09rem 0;
+    margin: .25rem auto .15rem;
+}
+@include yo-btn(
+    $name: blue,
+    $bgcolor: #00b4cb
+)
+@include yo-btn(
+    $name: red,
+    $bgcolor: #ef735a
+)
+@include yo-btn(
+    $name: orange,
+    $bgcolor: #ff9c00
+)
+@include yo-btn(
+    $name: wechat,
+    $bgcolor: #fbfafc,
+    $border-color: #d6d5d6,
+    $border-width: 1px
+)
+@include yo-btn(
+    $name: dashed,
+    $bgcolor: map-get($base,base-white),
+    $border-color: map-get($base,border-color-dark),
+    $border-width: 2px,
+    $color: map-get($base,base-color)
+){
+    font-size: map-get($benmu-font,font-15);
+    font-weight: normal;
+    &::after{
+       border-style: dashed;
+    }
+}
+@include yo-btn(
+    $name: link,
+    $bgcolor: map-get($base,base-green),
+    $color: map-get($base,base-white),
+    $padding: .1rem .22rem,
+    $radius: .05rem
+){
+
+    -moz-flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    font-weight: bold;
+    &:not(:first-child) {
+        margin: .15rem 0;
+    }
+}
+@include yo-btn(
+    $name: gray,
+    $bgcolor: #c7ced4
+)

@@ -1,0 +1,54 @@
+.yo-dialog {
+    width: 2.45rem;
+    padding-top: .20rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transition: all .3s ease;
+    @include transform(translate(-50%, -50%));
+    border-radius: .04rem;
+    .hd{
+        .title{
+            margin: 0;
+        }
+    }
+    .bd {
+        text-align: left;
+        padding: .12rem .1rem 0 .3rem;
+    }
+    .ft {
+        .yo-btn-dialog {
+            font-size: .18rem;
+            padding: .13rem 1em;
+            margin-bottom: 0;
+            color: map-get($base,base-color);
+            &::after {
+                border-width: 1px 1px 0 0;
+                border-color: #ddd;
+            }
+        }
+    }
+}
+
+.yo-dialog-bm-large {
+    width: 2.8rem;
+    padding-top: .2rem;
+    .letterSpac {
+        font-size: map-get($benmu-font, font-15);
+        margin-bottom: .05rem;
+    }
+}
+
+.yo-list-checked {
+    > .item {
+        margin: 0;
+        padding: 0;
+        color: map-get($base, base-gray);
+        font-size: map-get($benmu-font, font-15);
+    }
+}
+
+.yo-list-checked:after,
+.yo-list-checked .item:after {
+    content: none;
+}

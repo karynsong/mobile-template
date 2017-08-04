@@ -1,0 +1,338 @@
+@charset "utf-8";
+
+.ff-icon {
+    display: inline-block;
+    vertical-align: -1px;
+    font-family: "iconfont" !important;
+    font-size: .12rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+}
+
+/*急诊地图*/
+.ff-search:before {
+    content: "\e628";
+    font-size: .15rem;
+    color: #ccc;
+}
+.ff-search-map:before {
+    content: "\e628";
+    font-size: .19rem;
+    color: #919199;
+    margin: 0 .2rem;
+}
+.ff-del:before {
+    content: "\e620";
+    font-size: .15rem;
+    color: #a0a1a7;
+}
+
+.ff-zoom {
+    font-size: .19rem;
+    color: #777;
+}
+.ff-er:before {
+    content: "\e61b";
+    font-size: .16rem;
+    color: #fff;
+}
+.ff-hos-level:before {
+    content: "\e610";
+    font-size: .14rem;
+    color: #ceced9;
+}
+.ff-addr:before {
+    content: "\e61e";
+    font-size: .14rem;
+    color: #ceced9;
+}
+.ff-npf:before {
+    content: "\e60f";
+    font-size: .14rem;
+    color: #00d5b8;
+    margin-right: .08rem;
+}
+.ff-nav:before {
+    content: "\e6c3";
+    font-size: .13rem;
+    color: #fff;
+}
+.ff-details:before {
+    content: "\e6b8";
+    font-size: .185rem;
+    color: #4e5a6c;
+}
+.ff-address:before{
+    content: "\e6b5";
+    font-size: .22rem;
+    color: #45c4dd;
+}
+.ff-tel-null:before {
+    content: "\e6c4";
+    font-size: .22rem;
+    color: #45c4dd;
+}
+.ff-selec-icon:before{
+    content: "\e6cf";
+    font-size: .14rem;
+    color: #45c4dd;
+    vertical-align: 2px;
+}
+.ff-arr-up:before {
+    content: "\e637";
+    font-size: .14rem;
+    color: #45c4dd;
+    vertical-align: 1px;
+}
+.ff-hos-icon:before{
+    content: "\e6e8";
+    font-size: .15rem;
+    color: #f26977;
+    margin-right: .05rem;
+}
+.ff-special-icon:before{
+    content: "\e6e9";
+    font-size: .15rem;
+    color: #f5a66a;
+    margin-right: .05rem;
+}
+.ff-feedback{
+    line-height: .16rem;
+    &:before{
+        content: "\e6ea";
+        font-size: .2rem;
+        color: #777;
+    }
+}
+.ff-radio-null:before{
+    content: "\e67c";
+    font-size: .23rem;
+    color: #ccc;
+    font-weight: normal;
+    margin-right: .08rem;
+}
+.ff-radio-selected:before{
+    content: "\e67b";
+    font-size: .23rem;
+    color: #00b4cb;
+    font-weight: normal;
+    margin-right: .08rem;
+}
+/*日间手术*/
+.ff-arrow:before {
+    content: "\e61d";
+    font-size: .17rem;
+    color: #ccc;
+}
+.ff-arr-down:before {
+    content: "\e65a";
+    font-size: .08rem;
+    color: #45c4dd;
+    vertical-align: -3px;
+}
+
+
+/*登录*/
+.ff-voice:before{
+    content: "\e612";
+    font-size: .17rem;
+    color: map-get($base,base-blue);
+    line-height: .1rem;
+}
+.bm-voice-gray{
+    .ff-voice:before{
+        color: map-get($base,base-gray);
+    }
+}
+.pop-success-icon{
+    display: block;
+    height: 50px;
+    line-height: 30px;
+}
+.pop-success-icon:before{
+    content: "\e6f4";
+    font-size: 50px;
+    color: #fff;
+}
+.pop-loading-box{
+    padding: 3px 19px 4px 19px;
+}
+.pop-loading-icon{
+    background: url(map-get($base,image-path) + '/img/pop/loading-dark.gif');
+    width: 52px;
+    height: 52px;
+    background-size: cover;
+    display: block;
+}
+/*向右箭头 我的账户*/
+.ff-arrow-r:before{
+    content: "\e6f0";
+    font-size: .14rem;
+    color: #ccc;
+}
+/*医生主页*/
+.ff-heart:before {
+    content: "\e6ec";
+    color: #ffb430;
+    font-size: .18rem;
+}
+.ff-heart-white:before {
+    content: "\e6ec";
+    color: #fff;
+    font-size: .18rem;
+}
+.ff-badge:before {
+    content: "\e6ef";
+    color: #00d5b8;
+    font-size: .19rem;
+    vertical-align: -.02rem;
+}
+.ff-schedule:before {
+    content: "\e6eb";
+    color: #ffb430;
+    font-size: .19rem;
+    vertical-align: -.02rem;
+}
+.ff-team:before {
+    content: "\e6ed";
+    color: #53a9e5;
+    font-size: .19rem;
+    vertical-align: -.02rem;
+}
+.ff-cap:before {
+    content: "\e6ee";
+    color: #00b4cb;
+    font-size: .19rem;
+}
+
+.ff-arr-show-all:before {
+    content: "\e6f2";
+    font-size: .08rem;
+    color: #acacac;
+    vertical-align: -3px;
+}
+.ff-arr-pack-up:before {
+    content: "\e6f1";
+    font-size: .08rem;
+    color: #acacac;
+    vertical-align: -3px;
+}
+
+/*警告提醒图标*/
+.ff-tips:before {
+    content: "\e654";
+    font-size: .13rem;
+    color: #ceced9;
+}
+/*标准箭头*/
+
+.ff-top-arr:before {
+    content: "\e6f1";
+    font-size: .08rem;
+    color: #ccc;
+}
+.ff-right-arr:before {
+    content: "\e6f0";
+    font-size: .08rem;
+    color: #ccc;
+}
+.ff-bottom-arr:before {
+    content: "\e6f2";
+    font-size: .08rem;
+    color: #ccc;
+}
+.ff-left-arr:before {
+    content: "\e6f3";
+    font-size: .08rem;
+    color: #ccc;
+}
+.ff-white:before {
+    color: #fff!important;
+}
+/*暂无号源*/
+.ff-null-signal:before {
+    content: "\e6ae";
+    font-size: .43rem;
+    color: #dadada;
+}
+.hd-right-txt {
+    .ff-icon {
+        margin-left: .08rem;
+    }
+}
+/*暂无相关知名专家团队 感叹号XL*/
+.ff-null-exclamatory:before {
+    content: "\e613";
+    font-size: .8rem;
+    line-height: .8rem;
+    color: #d9d9d9;
+}
+.pop-success-icon{
+    display: block;
+    height: 50px;
+    line-height: 30px;
+    padding-top: 5px;
+}
+.pop-success-icon:before{
+    content: "\e6f4";
+    font-size: 50px;
+    color: #fff;
+}
+.pop-loading-box{
+    padding: 3px 19px 4px 19px;
+}
+.pop-loading-icon{
+    background: url(map-get($base,image-path) + '/pop/loading-dark.gif');
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    display: block;
+}
+.loading-text{
+    width: 120px;
+    height: 120px;
+}
+.ff-add:before{
+    content: "\e6c5";
+    font-size: 12px;
+    color: #4e5a6c;
+    vertical-align: .01rem;
+    margin-right: .02rem;
+}
+/*我的账户*/
+.ff-card:before{
+    content: "\e6f5";
+    font-size: .22rem;
+    color: #999;
+}
+.ff-shangbao:before{
+    content: "\e6f6";
+    font-size: .22rem;
+    color: #999;
+}
+.ff-attestation:before{
+    content: "\e6cb";
+    font-size: .12rem;
+    color: #cdf8ff;
+}
+.ff-tip-pop:before{
+    content: "\e6f7";
+    font-size: .2rem;
+    color: map-get($base,base-blue);
+}
+.ff-phone:before{
+    content: "\e622";
+    font-size: .2rem;
+    color: map-get($base,base-blue);
+}
+.ff-checked:before{
+    content: "\e614";
+    font-size: .2rem;
+    color: #ccc;
+}
+.item-on .ff-checked:before {
+    content: "\e611";
+    font-size: .2rem;
+    color: #00b4cb;
+}

@@ -1,0 +1,23 @@
+.urgent-select-wrap{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.urgent-select-pop{
+    background-color: map-get($base,pop-bgcolor);
+    position: relative;
+    z-index: 1100;
+    padding: .15rem .15rem .1rem;
+    .select-pop-title{
+        font-size: map-get($benmu-font,font-15);
+        color: map-get($base,base-gray);
+    }
+}
+.search-hot-pop{
+    padding: .1rem 0;
+}
+.urgent-select-pop-circle{
+    margin: 0 .1rem;
+    border-radius: 0 0 .05rem .05rem;
+    @include border($border-width:1px 0 0 0,$border-color:map-get($base,border-color));
+}

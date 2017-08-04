@@ -1,0 +1,65 @@
+// @Author: songqi
+// @Date:   2016-08-31
+// @Email:  songqi@benmu-health.com
+// @Last modified by:   zhangshuxia
+// @Last modified time: 2016-09-19
+
+@charset "utf-8";
+/**
+ * Yo框架全局base定义
+ * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方
+ * lib中map使用“_”开头，本文件中不使用"_"
+ * base ⇌ extra
+ */
+
+ $base: (
+ 	// 蓝色背景色
+ 	bg-color-blue:        #00b4cb,
+ 	// 默认文档背景色
+    bg-color:             #eee,
+ 	// 默认文本颜色
+ 	base-color: 		  #4e5a6c,
+    base-blue:            #00b4cb,
+    base-orange:          #ffa200,
+ 	base-white: 		  #ffffff,
+    base-gray:            #999,
+    base-green:           #00d5b8,
+    base-yellow:          #fffde8,
+    //ER不提供背景色
+    bg-npf-color:         #edfaf9,
+    //当前选中文字色
+    item-on-color:        #ffffff,
+ 	// 默认边框色
+    border-color:         #ddd,
+    border-color-dark:    #ccc,
+    booked-full-color:    #dadada,
+    pop-bgcolor:          #fbfbfb,
+    placeholder-color:    #c7ced4,
+    base-blue-v1:         #44bcbc,
+    // 适配：用于做元素随屏幕大小而变化的情况,需要扩展,默认为normal
+    responsive-type: scaling,
+    //修改基准宽度依据 100*100/375 iphone6
+    font-size-root-scaling: 26.6667vw,
+    // 开发时的字体资源
+    font-path:  "https://img.benmu-health.com/iconfont/wechatV2/1.0.7/",
+    image-path: "//img.benmu-health.com/wechatV2/img/",
+ );
+ $benmu-font:(
+    font-10:            .10rem,
+    font-12:            .12rem,
+    font-13:            .13rem,
+    font-14:            .14rem,
+    font-15:            .15rem,
+    font-16:            .16rem,
+    font-17:            .17rem,
+    font-18:            .18rem,
+    font-20:            .20rem,
+    font-22:            .22rem,
+);
+@font-face {
+    font-family: "iconfont";
+    // 现代浏览器
+    src: url(map-get($base,font-path) + 'iconfont.woff') format('woff'),
+    // Android2.2+
+    url(map-get($base,font-path) + 'iconfont.ttf') format('truetype');
+}

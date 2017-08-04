@@ -1,0 +1,93 @@
+@charset "utf-8";
+@import "../lib/fragment/yo-actionsheet";
+
+/**
+ * yo-header扩展
+ */
+
+.yo-actionsheet>.menu {
+    position: relative;
+}
+.yo-actionsheet  {
+    .item {
+        color: #333;
+    }
+}
+@include yo-actionsheet(
+    $name: bm,
+    $margin: .1rem,
+    $radius: .125rem,
+    $item-height: .8rem,
+    $bgcolor:map-get($base,base-white),
+    $item-font-size:  map-get($benmu-font,font-15),
+    $item-color: map-get($base,base-color)
+){
+    .menu {
+        position:relative;
+        .title {
+            position: relative;
+            z-index: 1;
+            background:map-get($base,base-white);
+            @include border($border-width:0 0 2px,$width-percent: 200%);
+            height: .45rem;
+        }
+    }
+    .main{
+        position: relative;
+        max-height: 3.6rem;
+        .yo-btn{
+            margin: 0;
+        }
+    }
+    .item {
+        @include flexbox();
+        @include align-items();
+        @include flex-direction(row);
+        border-bottom: 1px solid #ddd;
+        @include border(0 0 1px);
+        line-height: 1.1;
+        padding: 0 .15rem;
+
+        .btn {
+            -moz-flex-shrink: 0;
+            -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+        }
+        &-light {
+            font-size: map-get($benmu-font,font-18);
+            font-weight: bold;
+            color: map-get($base,base-blue);
+            @include justify-content(center);
+            height: .5rem;
+        }
+    }
+    .item:nth-child(2){
+        @include border($border-width:0);
+    }
+    .no-source-details {
+        overflow: hidden;
+        @include flex();
+    }
+    .no-source-inner {
+        text-align: left;
+    }
+    .speciality {
+        margin: .08rem .26rem 0 0;
+        font-size: map-get($benmu-font,font-12);
+        color: #9fbdbf;
+        line-height: 1.5;
+        @extend .limit-one;
+        text-align: left;
+    }
+    .surplus {
+        margin: .05rem 0 0;
+        font-size: map-get($benmu-font,font-12);
+        color: #9fbdbf;
+    }
+}
+/*医生主页弹层只改高度*/
+.yo-actionsheet-doctorIndex{
+    .item{
+        height: .55rem;
+    }
+}

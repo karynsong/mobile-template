@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import "../lib/widget/yo-tab";
+
+/**
+ * yo-tab扩展
+ */
+
+@include yo-tab(
+    $name: filter,
+    $height: .5rem,
+    $border-width: 0 0 1px 0,
+    $item-border-height: .2rem,
+    $bgcolor:map-get($base,content-color),
+    $color:map-get($base,font-color),
+    $on-color:map-get($base,on-font-color),
+    $font-size:map-get($benmu-font,fontSize-big),
+    $item-border-color: map-get($base, list-bor-color)
+){
+    .item-on{
+        border-bottom:3px solid #45c4dd;
+        font-weight: bold;
+    }
+}
+@include yo-tab(
+    $name: nav,
+    $height: .45rem,
+    $border-width: 0,
+    $item-border-height: .2rem,
+    $bgcolor:map-get($base,wrap-bgcolor),
+    $color:map-get($base,font-color),
+    $on-color:map-get($base,on-font-color),
+    $on-bgcolor:map-get($base,content-color),
+    $font-size:map-get($benmu-font,fontSize-big)
+)
+@include yo-tab(
+    $name: height,
+    $height: auto
+)

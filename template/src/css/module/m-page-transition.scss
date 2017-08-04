@@ -1,0 +1,131 @@
+.page-enter-active,
+.page-leave-active {
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-timing-function: cubic-bezier(.36, .66, .04, 1);
+    transition-timing-function: cubic-bezier(.36, .66, .04, 1);
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform
+}
+
+[page-direction=forward] .page-enter {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    opacity: 1;
+}
+
+[page-direction=forward] .page-enter-active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15)
+}
+
+[page-direction=forward] .page-enter-to {
+    opacity: 1;
+}
+
+[page-direction=forward] .page-leave {
+    opacity: .8;
+}
+
+[page-direction=forward] .page-leave-to {
+    -webkit-transform: translate3d(-33%, 0, 0);
+    transform: translate3d(-33%, 0, 0);
+    opacity: 0;
+}
+
+[page-direction=back] .page-enter {
+    -webkit-transform: translate3d(-33%, 0, 0);
+    transform: translate3d(-33%, 0, 0);
+    opacity: 1;
+}
+
+[page-direction=back] .page-enter-to {
+    opacity: 1;
+}
+
+[page-direction=back] .page-leave {
+    opacity: 1;
+}
+
+[page-direction=back] .page-leave-active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15)
+}
+
+[page-direction=back] .page-leave-to {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    opacity: 1;
+}
+
+// 子路由切换样式
+[page-direction=forward] .child-enter-active,
+[page-direction=back] .child-leave-active {
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-timing-function: cubic-bezier(.36, .66, .04, 1);
+    transition-timing-function: cubic-bezier(.36, .66, .04, 1);
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform
+}
+
+.child-enter {
+    opacity: 1;
+}
+
+.child-enter-to {
+    opacity: 1;
+}
+
+[page-direction=forward] .child-enter {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    opacity: .8;
+}
+
+[page-direction=forward] .child-enter-to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.child-leave {
+    opacity: 0;
+}
+
+.child-leave-to {
+    opacity: 0;
+}
+
+[page-direction=back] .child-leave {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+[page-direction=back] .child-leave-to {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+}
+
+// 解绑弹窗动画类
+.active {
+    -webkit-animation-name: g;
+    animation-name: g;
+    -webkit-animation-duration: .2s;
+    animation-duration: .2s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.hide {
+    -webkit-animation-name: f;
+    animation-name: f;
+    -webkit-animation-duration: .1s;
+    animation-duration: .1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}

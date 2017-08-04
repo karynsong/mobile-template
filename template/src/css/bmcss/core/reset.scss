@@ -1,0 +1,201 @@
+@charset "utf-8";
+@import "extra";
+@import "iconfont";
+@import "../lib/core/merge-extra";
+@import "config";
+@import "../lib/core/merge-config";
+@import "../lib/core/reset";
+
+html {
+    background-color: map-get($base, bg-color);
+    color: map-get($base, base-color);
+    touch-action: none;
+    /*font-size: 100px;*/
+    // 用于rem计算,适配不同屏幕大小的场景
+    font-size: map-get($base, font-size-root);
+    @include user-select;
+}
+body{
+    color: map-get($base, base-color);
+    overflow: scroll;
+}
+input,
+input:focus,
+input:active{user-select: text;}
+
+//重置ionic样式影响
+.item{
+    border: none;
+    min-height: auto;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.item, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    margin-bottom: 0;
+    font-size: inherit;
+    color: inherit;
+}
+a,span {
+    font-size: inherit;
+    line-height: null;
+    color: inherit;
+}
+.item h3 {
+    margin: 0;
+}
+.h1,.h2,.h3,.h4,.h5,.h6,
+h1,h2,h3,h4,h5,h6{
+    color: map-get($base,base-color);
+}
+
+input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], textarea {
+    height: auto;
+    line-height: null;
+    padding-top: .06rem;
+    padding-bottom: .04rem;
+    font-size: .15rem;
+    color: #4e5a6c;
+}
+
+.mt5{
+    margin-top: .05rem !important;
+}
+.mt15{
+    margin-top: .15rem !important;
+}
+.mb5{
+    margin-bottom: .05rem !important;
+}
+.mb15{
+    margin-bottom: .15rem !important;
+}
+.ml5{
+    margin-left: .05rem !important;
+}
+.mr5{
+    margin-right: .05rem !important;
+}
+.mt10{
+    margin-top: .1rem !important;
+}
+.mr10{
+    margin-right: .1rem !important;
+}
+.mb10{
+    margin-bottom: .1rem !important;
+}
+.ml10{
+    margin-left: .1rem !important;
+}
+.mr20{
+    margin-right: .2rem !important;
+}
+.pb15{
+    padding-bottom: .15rem !important;
+}
+a {
+    color: map-get($base, base-color);
+}
+.tc{
+    text-align: center;
+}
+.tr{
+    text-align: right;
+}
+.tl {
+    text-align: left;
+}
+.c-base{
+    color: map-get($base, base-color);
+}
+.c-red{
+    color: map-get($base,nav-color);
+}
+.c-green{
+    color: #16d4b8 !important;
+}
+.c-blue{
+    color: #00b4cb !important;
+}
+.c-gray{
+    color: #999 !important;
+}
+.c-orange{
+    color: #ffa200 !important;
+}
+.c-white {
+    color: #fff !important;
+}
+.disabled{
+    color: #ccc !important;
+}
+.font-b{
+    font-weight: bold !important;
+}
+.fs12{
+    font-size: map-get($benmu-font,s-font) !important;
+}
+.fs13{
+    font-size: map-get($benmu-font,fontSize-medium) !important;
+}
+.fs15{
+    font-size: map-get($benmu-font,fontSize-big) !important;
+}
+/*公用模块*/
+.to-end{
+    font-size: map-get($benmu-font,font-15);
+    color: map-get($base,base-gray);
+    margin-top: .22rem;
+    text-align: center;
+}
+.set-limit {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.limit-one{
+    @include ellipsis($line-clamp: 1);
+}
+.limit-two{
+    @include ellipsis($line-clamp: 2);
+}
+.limit-three{
+    @include ellipsis($line-clamp: 3);
+}
+.unlimit{
+    -webkit-line-clamp: inherit;
+    overflow: visible;
+    white-space: normal;
+}
+.bm-position{
+    position: relative;
+    height: 100%;
+    .yo-mask{
+        top: .57rem;
+    }
+    .yo-list-suggest{
+        position: absolute;
+        top: .44rem;
+        right: 0;
+        left: 0;
+        z-index: 2000;
+    }
+}
+.btn-box{
+    padding: 0 .15rem;
+}
+input::disabled{
+    background: #fff;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{ color: map-get($base,placeholder-color);}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder { color: map-get($base,placeholder-color); }
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder { color: map-get($base,placeholder-color); }

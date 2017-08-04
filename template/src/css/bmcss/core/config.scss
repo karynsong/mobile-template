@@ -1,0 +1,193 @@
+@charset "utf-8";
+/**
+ * Yo框架全局Variables
+ * Yo基础变量map，如果不想定义某属性，将其value设置为null；
+ * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方
+ * variables中map使用“_”开头，本文件中不使用"_"
+ * variables ⇌ config
+ */
+
+/**
+ */
+$mask: (
+	// {Color} 背景色
+    bgcolor: rgba(#000, .3)
+);
+$header: (
+    // {Length} 高度
+    height:         .4rem,
+    bgcolor:        #00b4cb,
+    // {Color} 文本色
+    color:          #fff,
+    // {Length} 文本大小
+    font-size:      .13rem,
+);
+$card: (
+    // {Length} 外边距
+    margin:       0,
+    // {Length} 圆角半径长度
+    radius:       null,
+    // {Length} 外边框厚度
+    border-width: 0,
+    // {Color} 外边框色
+    border-color: #ccc,
+    // {Color} 背景色
+    bgcolor:      #fff,
+    // {Color} 文本色
+    color:        null,
+    // {Length} 字号大小
+    font-size:    map-get($benmu-font, font-15),
+    // {Length} 头部边框厚度
+    hd-border-width: 0 0 1px,
+    // {Color} 头部边框色
+    hd-border-color: #fff,
+    // {Length} 底部边框厚度
+    ft-border-width: 1px 0 0,
+    // {Color} 底部边框色
+    ft-border-color: #ddd
+);
+
+$btn: (
+    // {Color} Length
+    border-width:   0px,
+    // {Color} 边框色
+    border-color:   #16d4b8,
+    // {Color} 背景色
+    bgcolor:        #16d4b8,
+    // {Color} 文本色
+    color:          #fff,
+    // {Color} 激活时边框色
+    active-border-color: null,
+    // {Color} 激活时背景色
+    active-bgcolor:      null,
+    // {Color} 激活时文本色
+    active-color:        null,
+    // {Length} 内补白(使用em让根据字号动态调整)
+    padding:        0 1.4em,
+    // {Length} 圆角半径
+    radius:         .05rem,
+    // {Length} 字号
+    font-size:      null,
+    // {Length} 宽度
+    width:          null,
+    // {Length} 高度
+    height:         null,
+    // {Length} 默认预设3种尺寸按钮：
+    // small
+    s-height:       null,
+    s-font-size:    null,
+    // medium
+    m-height:       null,
+    m-font-size:    null,
+    // large
+    l-height:       null,
+    l-font-size:    null
+);
+$dialog: (
+    // {Length | null} 宽度
+    width:           null,
+    // {Length} 高度
+    height:          null,
+    // {Length} 圆角
+    radius:          .08rem,
+    // {Color} 边框色
+    border-color:    map-get($base, bgcolor),
+    // {Color} 标题颜色
+    title-color:     map-get($base, color),
+    // {Length} 标题文字大小
+    title-font-size: .16rem,
+    // {Length} 主体区域间隙
+    bd-padding:      .03rem .1rem .15rem,
+    // {Length} 主体区域文字大小
+    bd-font-size:    .16rem
+);
+$input: (
+    border-color:      map-get($base, border-color),
+    placeholder-color: #c7ced4,
+    height:            .3rem,
+    color: map-get($base, base-color)
+);
+$list: (
+    // {Color} 列表项边框色
+    item-border-color: map-get($base, border-color),
+    item-border-space: .15rem,
+    item-padding: .15rem
+
+);
+$search: (
+    input-border-color: #ddd
+);
+$tip: (
+    bgcolor: rgba(#000, .3)
+);
+$breadcrumb: (
+    // {Length} 面包屑高度
+    height:       .44rem,
+    // {Color} 面包屑背景色
+    bgcolor:      #f0f0f0,
+    // {Color} 面包屑文本色
+    color:        map-get($base, color),
+    // {Color} 面包屑间隔色
+    arrow-color:  #ccc,
+    // {Length} 面包屑子项间隙
+    item-space:   .05rem
+);
+$tab: (
+    // {Length} 组件宽度
+    width:              null,
+    // {Length} 组件高度
+    height:             .44rem,
+    // {Length} 圆角半径
+    radius:             null,
+    // {Length} 边框厚度
+    border-width:       1px 0 0 0,
+    // {Color} 边框色
+    border-color:       map-get($base, border-color),
+    // {Color} tab背景色
+    bgcolor:            #fafafa,
+    // {Color} tab文本色
+    color:              map-get($base, sub-color),
+    // {Color} tab激活背景色
+    on-bgcolor:         null,
+    // {Color} tab激活文本色
+    on-color:           #00bec8,
+    // {Length} 文本大小
+    font-size:          map-get($base, font-size-baseline),
+    // {Length} 水平ico大小
+    x-ico-size:         .12rem,
+    // {Length} 垂直ico大小
+    y-ico-size:         .2rem,
+    // {Length} only ico大小
+    only-ico-size:      .28rem,
+    // {Color} item间隔线高度
+    item-border-height: 100%,
+    // {Color} item间隔线颜色
+    item-border-color:  transparent
+);
+$search: (
+    // {Length} 搜索框区域内边距
+    padding:            .1rem,
+    // {Color} 搜索框区域底色
+    bgcolor:            #fff,
+    // {Length} 搜索框及搜索按钮圆角
+    radius:             .05rem,
+    // {Length} 搜索框高度
+    input-height:       .3rem,
+    // {Color} 搜索框边框色
+    input-border-color: #ddd,
+    // {Color} 搜索框底色
+    input-bgcolor:      #fff,
+    // {Color} 搜索按钮底色
+    button-bgcolor:     #fff,
+    // {Color} 搜索按钮文本色
+    button-color:       #45c4dd,
+    // {Color} 取消操作区文本色
+    cancel-color:       #45c4dd
+);
+// @base-calc: 1000vw/37.5;
+// @media screen and (min-width:375px){
+//     html {
+//     font-size: 100px;
+//     font-size:@base-calc;
+//   }
+// }

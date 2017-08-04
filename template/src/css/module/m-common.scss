@@ -1,0 +1,159 @@
+/*文字中的分隔线*/
+
+.cut-line {
+    display: inline-block;
+    /*vertical-align: middle;*/
+    margin: 0 .04rem;
+    @include rect(1px, .1rem);
+    background: rgba(125, 132, 144, .7);
+    &-blue {
+        background: map-get($base, base-blue);
+    }
+    &-white {
+        background: map-get($base, base-white);
+    }
+    &-gray-white {
+        background: rgba(255, 255, 255, .8);
+    }
+}
+
+
+/*定义一些暂无状态*/
+
+.card-null {
+    padding: .25rem 0;
+    @include flex-direction(column);
+    text-align: center;
+    .content-null,
+    .link-other-options {
+        @include flexbox();
+        @include align();
+        font-size: map-get($benmu-font, font-15);
+        color: map-get($base, base-blue);
+        line-height: 1;
+    }
+    .content-null {
+        padding: 0 0 .15rem;
+        color: map-get($base, base-gray);
+    }
+    &-bg {
+        background: map-get($base, base-white);
+    }
+}
+
+.link-color-text {
+    color: #00b4cb;
+    position: relative;
+    margin-left: .05rem;
+    padding-left: .07rem;
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: .01rem;
+        width: 1px;
+        height: .13rem;
+        background: map-get($base,base-blue);
+    }
+}
+
+.fill-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.fill-remain-screen {
+    @include flexbox();
+    flex: 1;
+}
+
+.flex-column {
+    @include flexbox();
+    @include flex-direction(column);
+}
+.flex-box{
+    @include flexbox;
+    @include align-items($align-items: center);
+}
+.flex {
+    @include flex();
+}
+
+.overflow-show {
+    overflow: visible;
+}
+
+.set-scroller {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.text-left{
+    text-align: left !important;
+}
+.text-center{
+    text-align: center !important;
+}
+.text-right{
+    text-align: right !important;
+}
+
+/*设置arrow 位置*/
+
+.arr-icon {
+    position: absolute;
+    right: .15rem;
+    left: auto;
+    bottom: .1rem;
+    line-height: .18rem;
+}
+
+.arr-icon-2 {
+    position: absolute;
+    right: 0;
+    left: auto;
+    bottom: -2px;
+    line-height: .18rem;
+}
+
+.arr-icon-3 {
+    position: absolute;
+    right: .15rem;
+    left: auto;
+    bottom: 0;
+    line-height: .18rem;
+}
+
+.icon-num {
+    vertical-align: .005rem;
+}
+
+.flex-1 {
+    @include flexbox();
+    @include flex();
+}
+/*用ionic框架弹层重置代码*/
+.popup-container{
+    .popup-bm-box{
+        .popup-head{
+            color: #4e5a6c;
+            padding: 20px 10px 0;
+            .popup-title{
+                font-size: 18px;
+            }
+        }
+        .popup-body{
+            padding: .1rem .15rem .15rem;
+            p.bm-ionic-popup{
+                color: #999 !important;
+                font-size: 15px;
+                text-align: left !important;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,76 @@
+
+.search-bar {
+    @include border($border-width:0 0 1px 0);
+    @include align;
+    background-color: map-get($base,base-white);
+    height: .5rem;
+    width: 100%;
+}
+.search-hot-tags {
+    padding: .2rem 0 .2rem .15rem ;
+}
+.recommend-word{
+    @include flexbox;
+    @include flex-direction($flex-direction: row);
+    @include flex-wrap($flex-wrap:wrap);
+    span{
+        padding: .07rem .15rem;
+        background-color: #fff;
+        border-radius: .05rem;
+        @include border($border-width:1px,$border-color:map-get($base,border-color),$radius: .05rem);
+        font-size: map-get($benmu-font,font-15);
+        margin: 0 .1rem .1rem 0;
+
+    }
+    span.item-on{
+        @include border($border-width:1px,$border-color:map-get($base,base-blue),$radius: .05rem);
+        background-color: map-get($base,base-blue);
+    }
+    .item-on{
+        background-color: map-get($base,base-green);
+        color: #fff;
+    }
+}
+.recommend-word-scroll {
+    @include flex-wrap($flex-wrap: nowrap);
+    white-space: nowrap;
+    @include flex();
+    @include overflow();
+    height: 100%;
+    @include align-items();
+
+    span {
+        margin: 0 .1rem 0 0;
+    }
+}
+.recommend-specialist {
+    background: map-get($base,base-white);
+    @include border($border-width:0 0 1px 0,$border-color:map-get($base,border-color));
+    span {
+        line-height: .26rem;
+        padding: 0 .16rem;
+        @include border($border-width:1px,$border-color:map-get($base,border-color),$radius: .25rem);
+        font-size: map-get($benmu-font,font-12);
+        color: map-get($base,base-gray);
+    }
+    span.item-on{
+        @include border($border-width:1px,$border-color:map-get($base,base-blue),$radius: .25rem);
+        background-color: map-get($base,base-white);
+        color: map-get($base,base-blue);
+        &::before {
+            position: absolute;
+            content: '';
+            @include rect(.08rem,.05rem);
+            border-width: 2px;
+            border-style: solid;
+            border-color: transparent transparent map-get($base,base-blue) map-get($base,base-blue);
+            @include transform(rotate(-45deg));
+            right: .05rem;
+            top: 36%;
+        }
+    }
+}
+.specialist-tags-pad {
+    margin: 0 0 .05rem;
+    padding: .15rem 0 .05rem .15rem;
+}
