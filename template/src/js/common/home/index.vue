@@ -8,9 +8,11 @@
 import { getQueryString } from 'Utils/url';
 export default {
     created(){
-        var hash = getQueryString('hash');
+        var hash = getQueryString('hash').replace(/^\#\//g, '');
         if(hash){
-            location.replace(location.origin + location.pathname + decodeURIComponent(hash));
+            // 修改了 query 次所以会多一次跳转
+            // location.replace(location.origin + location.pathname + decodeURIComponent(hash));
+            location.href = location.href + hash;
         }
     }
 }

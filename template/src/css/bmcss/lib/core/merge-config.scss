@@ -168,6 +168,13 @@
     $table: $_table !global;
 }
 
+// 合并variables和config中的timeline map
+@if global-variable-exists(timeline) {
+    $timeline: map-merge($_timeline, $timeline) !global;
+} @else {
+    $timeline: $_timeline !global;
+}
+
 // 合并variables和config中的toolbar map
 @if global-variable-exists(toolbar) {
     $toolbar: map-merge($_toolbar, $toolbar) !global;
@@ -229,6 +236,20 @@
     $number: map-merge($_number, $number) !global;
 } @else {
     $number: $_number !global;
+}
+
+// 合并variables和config中的picker map
+@if global-variable-exists(picker) {
+    $picker: map-merge($_picker, $picker) !global;
+} @else {
+    $picker: $_picker !global;
+}
+
+// 合并variables和config中的popup map
+@if global-variable-exists(popup) {
+    $popup: map-merge($_popup, $popup) !global;
+} @else {
+    $popup: $_popup !global;
 }
 
 // 合并variables和config中的panel map(panel和group公用一个map)

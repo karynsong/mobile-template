@@ -454,6 +454,36 @@ $_table: (
     on-bgcolor:          null
 );
 
+// Fragment timeline(12)
+$_timeline: (
+    // {Length} timeline元件内边距
+    padding:            .1rem,
+    // {Length} item底部间距
+    item-padding:       0 0 .1rem,
+    // {Length} 时间区域宽度
+    side-width:         .5rem,
+    // {Length} 时间区域右侧内边距
+    side-padding:       0 .1rem 0 0,
+    // {Length} 时间区域右侧外边距
+    side-margin:        0 .15rem 0 0,
+    // {Color} 时间区域文本色
+    side-color:         #666,
+    // {Length} 时间轴上的关键帧顶部偏移距离
+    point-top:          .08rem,
+    // {Length} 时间轴上的关键帧尺寸大小
+    point-size:         .07rem,
+    // {Length} 时间轴上的关键帧边框厚度
+    point-border-width: 1px,
+    // {Color} 时间轴上的关键帧边框色
+    point-border-color: #999,
+    // {Color} 时间轴线条边框厚度
+    border-width:       1px,
+    // {Length} 时间轴线条边框色
+    border-color:       #ddd,
+    // {Length} 时间轴首个子项文本颜色
+    first-item-color:   #f60
+);
+
 // Fragment toolbar(11)
 $_toolbar: (
     // {Length} 宽度
@@ -633,6 +663,30 @@ $_number: (
     sign-color:          #999,
     // {Length} 字号
     font-size:           .16rem,
+);
+
+// Fragment picker(3)
+$_picker: (
+    // {Integer} 默认显示几个列表项
+    item:        5,
+    // {Length} 每个列表项的高度
+    item-height: .3rem,
+    // {Color} 边框色
+    border-color: map-get($base, border-color)
+);
+
+// Fragment popup(5)
+$_popup: (
+    // {Color} 高度
+    height:       null,
+    // {Color} 边框色
+    border-color: #999,
+    // {Color} 头部背景色
+    hd-bgcolor:   #f0f0f0,
+    // {Color} 按钮文本色
+    btn-color:    map-get($base, link-color),
+    // {Color} 背景色
+    bgcolor:      #fff
 );
 
 // Widget rating(3)
