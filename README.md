@@ -1,5 +1,5 @@
 ## 使用安装
-
+测试分支
 权限不足请使用 sudo
 
 BM init -f mobile
